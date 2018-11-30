@@ -23,18 +23,18 @@ app.get('/', (req, res) => {
     res.render('index',{data : {name : "fred",age: 12}})
   });
 
-// app.post("/about",(req,res) => {
-//     console.log(req.body)
-//     res.render("about")
-// })
+app.post("/about",(req,res) => {
+    console.log(req.body)
+    res.render("about")
+})
 
-// app.get("/stories",(req,res) => {
-//     let sId = req.params.id;
-//     res.render('stories')
-// })
-// app.get("/story/:id",(req,res) => {
-//     let sId = req.params.id;
-//     res.render('story',{storyId : sId})
-// })
+app.get("/stories",(req,res) => {
+    let sId = req.params.id;
+    res.render('stories')
+})
+app.get("/story/:id",(req,res) => {
+    let sId = req.params.id;
+    res.render('story',{storyId : sId})
+})
 let port = process.env.PORT || 3000;
 app.listen(port);
