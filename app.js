@@ -36,5 +36,5 @@ app.get('/', (req, res) => {
 //     let sId = req.params.id;
 //     res.render('story',{storyId : sId})
 // })
-
-app.listen(3004);
+let port = process.env.PORT || 3000;
+app.listen(port);
